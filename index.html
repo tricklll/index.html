@@ -7,41 +7,46 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #003366, #0055a5);
+            color: white;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #003366;
-            color: white;
-            padding: 15px 0;
+            background-color: #002244;
             text-align: center;
-            position: relative;
+            padding: 20px 10px;
         }
 
         header img {
-            width: 80px;
-            position: absolute;
-            left: 20px;
-            top: 10px;
+            width: 100px;
         }
 
         header h1 {
-            margin: 0;
+            margin: 10px 0;
+            font-size: 1.8rem;
         }
 
         main {
             max-width: 800px;
             margin: 20px auto;
-            background: white;
+            background: #f4f4f4;
+            color: #333;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
             color: #003366;
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
         form {
@@ -60,11 +65,12 @@
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1rem;
         }
 
         form textarea {
             resize: vertical;
-            height: 100px;
+            height: 120px;
         }
 
         form button {
@@ -74,11 +80,23 @@
             color: white;
             border: none;
             border-radius: 5px;
+            font-size: 1rem;
             cursor: pointer;
         }
 
         form button:hover {
             background-color: #0055a5;
+        }
+
+        .confirmation {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #28a745;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+            text-align: center;
         }
 
         footer {
@@ -90,6 +108,15 @@
             font-size: 14px;
         }
     </style>
+    <script>
+        function showConfirmation(type) {
+            const message = document.getElementById("confirmation-message");
+            message.textContent = type === "denuncia"
+                ? "Sua denúncia foi enviada com sucesso. A Polícia Federal mantém a total confidencialidade."
+                : "Sua queixa foi registrada com sucesso. Entraremos em contato, se necessário.";
+            message.style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -98,7 +125,13 @@
     </header>
     <main>
         <h2>Fazer uma Denúncia Anônima</h2>
-        <form action="https://formsubmit.co/delegaciavirtualdpf@gmail.com" method="POST">
+        <p>
+            A Polícia Federal assegura a total confidencialidade de suas denúncias. Nenhuma informação que possa identificar você será coletada.
+        </p>
+        <form 
+            action="https://formsubmit.co/delegaciavirtualdpf@gmail.com" 
+            method="POST" 
+            onsubmit="showConfirmation('denuncia'); return false;">
             <input type="hidden" name="_subject" value="Denúncia Anônima">
             <input type="hidden" name="_template" value="table">
             <label for="descricao-denuncia">Descrição:</label>
@@ -107,21 +140,18 @@
         </form>
 
         <h2>Prestar uma Queixa</h2>
-        <form action="https://formsubmit.co/delegaciavirtualdpf@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Queixa Formal">
-            <input type="hidden" name="_template" value="table">
-            <label for="nome-queixa">Nome Completo:</label>
-            <input type="text" id="nome-queixa" name="nome" required>
-            <label for="cpf-queixa">CPF:</label>
-            <input type="text" id="cpf-queixa" name="cpf" required>
-            <label for="descricao-queixa">Descrição:</label>
-            <textarea id="descricao-queixa" name="descricao" required></textarea>
-            <button type="submit">Enviar Queixa</button>
-        </form>
-    </main>
-    <footer>
-        <p>© 2025 Delegacia Virtual - Polícia Federal</p>
-    </footer>
-</body>
-</html>
+        <p>
+            Preencha o formulário abaixo para registrar uma queixa formal. O CPF é obrigatório para validação de sua identidade.
+        </p>
+        <form 
+            action="https://formsubmit.co/delegaciavirtualdpf@gmail.com" 
+            method="POST" 
+            onsubmit="showConfirmation('queixa'); return false;">
+            <input ty
 
+         
+           
+         
+           
+          
+            
