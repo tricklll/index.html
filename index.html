@@ -28,35 +28,24 @@
         p {
             font-size: 1.1em;
         }
-        form {
-            background: white;
-            border-radius: 8px;
+        .form-link {
             margin: 20px auto;
             padding: 20px;
             max-width: 500px;
+            background: white;
+            border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        label {
+        .form-link a {
             display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
             background-color: #002855;
             color: white;
-            border: none;
+            text-decoration: none;
             padding: 10px 20px;
             border-radius: 4px;
-            cursor: pointer;
+            margin-bottom: 10px;
         }
-        button:hover {
+        .form-link a:hover {
             background-color: #001f40;
         }
         footer {
@@ -73,23 +62,15 @@
         <p>Faça sua denúncia ou registre uma queixa. Garantimos a confidencialidade das informações enviadas.</p>
     </header>
 
-    <form id="denuncia-form" action="mailto:delegaciavirtualdpf@gmail.com" method="POST" enctype="text/plain">
+    <div class="form-link">
         <h2>Denúncia Anônima</h2>
-        <label for="descricao-denuncia">Descrição:</label>
-        <textarea id="descricao-denuncia" name="Descrição da denúncia" rows="5" placeholder="Descreva aqui sua denúncia" required></textarea>
-        <button type="submit">Enviar Denúncia</button>
-    </form>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9ZyoTc57FiZ7DApPytIa2H4JM_EJEKkjLDy5rMIWZbFdLFg/viewform?usp=header" target="_blank">Acessar Formulário de Denúncia</a>
+    </div>
 
-    <form id="queixa-form" action="mailto:delegaciavirtualdpf@gmail.com" method="POST" enctype="text/plain">
+    <div class="form-link">
         <h2>Registrar Queixa</h2>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="Nome" placeholder="Seu nome completo" required>
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="CPF" placeholder="000.000.000-00" required>
-        <label for="descricao-queixa">Descrição:</label>
-        <textarea id="descricao-queixa" name="Descrição da queixa" rows="5" placeholder="Descreva aqui sua queixa" required></textarea>
-        <button type="submit">Enviar Queixa</button>
-    </form>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScMnwaozlFHmB17T8bwSEW3-FoymNtlW-fV64Qoc5kUZngx-Q/viewform?usp=header" target="_blank">Acessar Formulário de Queixa</a>
+    </div>
 
     <footer>
         <p>&copy; Delegacia Virtual da Polícia Federal. Garantimos sua confidencialidade.</p>
@@ -97,8 +78,9 @@
 </body>
 </html>
 
-      
-        
+ 
+
+    
        
        
        
