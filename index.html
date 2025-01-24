@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegacia Virtual - Polícia Federal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            width: 80px;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #003366;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0055a5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Bras%C3%A3o_da_Pol%C3%ADcia_Federal_do_Brasil.png" alt="Brasão Polícia Federal">
+        <h1>Delegacia Virtual - Polícia Federal</h1>
+    </header>
+    <main>
+        <h2>Fazer uma Denúncia Anônima</h2>
+        <form action="https://formsubmit.co/delegaciavirtualdpf@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Denúncia Anônima">
+            <input type="hidden" name="_template" value="table">
+            <label for="descricao-denuncia">Descrição:</label>
+            <textarea id="descricao-denuncia" name="descricao" required></textarea>
+            <button type="submit">Enviar Denúncia</button>
+        </form>
+
+        <h2>Prestar uma Queixa</h2>
+        <form action="https://formsubmit.co/delegaciavirtualdpf@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Queixa Formal">
+            <input type="hidden" name="_template" value="table">
+            <label for="nome-queixa">Nome Completo:</label>
+            <input type="text" id="nome-queixa" name="nome" required>
+            <label for="cpf-queixa">CPF:</label>
+            <input type="text" id="cpf-queixa" name="cpf" required>
+            <label for="descricao-queixa">Descrição:</label>
+            <textarea id="descricao-queixa" name="descricao" required></textarea>
+            <button type="submit">Enviar Queixa</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2025 Delegacia Virtual - Polícia Federal</p>
+    </footer>
+</body>
+</html>
+
